@@ -18,7 +18,7 @@ class DeferImpl {
 };
 
 int deferred_function() {
-	cout << "function deferred." << endl;
+	cout << "deferred function." << endl;
 }
 
 #define CONCATENATE_IMPL(s1,s2) s1##s2
@@ -30,9 +30,9 @@ int deferred_function() {
 #define defer(fn) defer_impl(fn, __COUNTER__)
 
 int main() {
-	auto deferred_named_lambda = [](){ cout << "named lambda deferred." << endl;};
+	auto deferred_named_lambda = [](){ cout << "deferred named lambda." << endl;};
 	defer(deferred_named_lambda);
-	defer([](){ cout << "anonymous lambda deferred." << endl;});
+	defer([](){ cout << "deferred anonymous lambda." << endl;});
 	defer(deferred_function);
 	return 0;
 }
