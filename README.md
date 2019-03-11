@@ -1,10 +1,10 @@
-#Emulate defer from go in C++
+# Emulate defer from go in C++
 
-##Semantics
+## Semantics
 Roughly match the semantics of `defer` in go. For more information on
 the defer keyword in go, see [the go tour](https://tour.golang.org/flowcontrol/12).
 
-##Usage
+## Usage
 1. You can defer a named lambda:
 
         auto deferred_named_lambda = [](){
@@ -25,9 +25,9 @@ the defer keyword in go, see [the go tour](https://tour.golang.org/flowcontrol/1
             defer(deferred_function);
         }
 
-##Examples
+## Examples
 See example.cpp
 
-##Test
+## Test
 1. `make`
 1. `./example`
